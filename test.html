@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 800px;
+      }
+    </style>
+    
+    <script src="Historial_de_ubicaciones/ubicaciones.js"></script>
+    
+</head>
+
+<body>
+
+    <form action='#' onsubmit="return false;">
+    <input type='file' id='fileinput'>
+    <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+    </form>
+    
+    <form name="chronoForm">
+        <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
+        <input type="button" name="reset" value="stop!" onClick="chronoStop()" />
+    </form>
+
+    <div id="map"></div>
+    
+    <script src="test.js"></script>
+    <script
+			src="https://maps.googleapis.com/maps/api/js?key=[API-KEY]&callback=initMap" async defer
+			type="text/javascript"></script>
+</body>
+
+</html>
