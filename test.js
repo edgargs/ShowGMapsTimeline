@@ -3,7 +3,11 @@ var map;
 const LIMA_LAT = -12.0553028;
 const LIMA_LNG = -77.0627323;
 
-  function initMap() {
+function loadGmaps() {
+      google.load("maps", 3, {"other_params": {"key": PRIV_API_KEY} , "callback" : initMap});
+}
+
+  function initMap() {      
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: LIMA_LAT, lng: LIMA_LNG},
       zoom: 12

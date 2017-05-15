@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body  onload="loadGmaps();">
 
     <form action='#' onsubmit="return false;">
     <input type='file' id='fileinput'>
@@ -30,9 +30,11 @@
 
     <div id="map"></div>
 
-    <script
-			src="https://maps.googleapis.com/maps/api/js?key=[API-KEY]&callback=initMap" async defer
-			type="text/javascript"></script>
+    <script src="gmaps_key.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--script
+			src="https://maps.googleapis.com/maps/api/js?key=PRIV_API_KEY&callback=initMap" async defer
+			type="text/javascript"></script-->
     <script src="test.js"></script>
 </body>
 
